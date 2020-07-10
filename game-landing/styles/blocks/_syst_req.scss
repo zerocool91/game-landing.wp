@@ -1,0 +1,36 @@
+#system_req {
+  background: url("../img/bg_syst_req.jpg");
+  background-size: cover;
+  background-position: top left;
+  text-align: center;
+  color: #fff;
+  padding-top: 145px;
+  padding-bottom: 170px;
+
+  .wrapper {
+    max-width: 1199px;
+    margin: 133px auto 0;
+    padding: 0 15px;
+  table {
+    max-width: 573px;
+    text-align: left;
+    border-collapse: collapse;
+
+    tr {
+      td {
+        border: 1px solid #979797;
+        padding: 15px 18px;
+
+        h3 {
+          font-size: 24px;
+          letter-spacing: 2px;
+          color: $color_orange;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+}

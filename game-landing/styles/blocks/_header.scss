@@ -1,0 +1,152 @@
+$font-size: 12;
+
+.site-header {
+  position: absolute;
+  top: 52px;
+  font-family: $content_font;
+  font-weight: bold;
+  color: #fff;
+  font-size: $font-size * 1px;
+  text-transform: uppercase;
+  line-height: (16/$font-size) * 1em;
+  letter-spacing: 0.1em;
+  width: 100%;
+
+  nav ul {
+    @include reset-list;
+
+    li {
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 20px;
+
+        &:hover {
+          color: $color_orange;
+        }
+      }
+    }
+  }
+
+  .flexed {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .language-list {
+      position: relative;
+
+      .active-language {
+        padding: 5px 25px 5px 5px;
+        position: relative;
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+        margin-right: 20px;
+        cursor: pointer;
+
+        &:hover {
+          color: $color_orange;
+        }
+
+        &:after {
+          content: url("../img/row.png");
+          display: inline-block;
+          margin-left: 5px;
+          transition: transform 0.3s ease-out;
+        }
+      }
+
+      .list-language {
+        @include reset-list;
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 3px;
+        position: absolute;
+        padding: 5px 20px 5px 5px;
+        left: 0;
+        top: 20px;
+        display: none;
+
+        li {
+          a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 0;
+
+            &:hover {
+              color: $color_orange;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-toggler {
+      display: none;
+    }
+
+    .show-list {
+      .active-language:after {
+        transform: rotate(90deg);
+      }
+
+      .list-language {
+        display: inline-block;
+      }
+    }
+
+    .icons {
+      a:first-child {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .site-header {
+    .main-menu {
+      display: none;
+
+
+      ul {
+        @include reset-list;
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 3px;
+        position: absolute;
+        padding: 5px 15px 5px 5px;
+        right: 0;
+        top: 60px;
+        text-align: right;
+
+        li {
+          display: block;
+          padding: 5px;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 0;
+
+            &:hover {
+              color: $color_orange;
+            }
+          }
+        }
+      }
+    }
+
+    .main-menu.show-menu {
+      display: block;
+    }
+
+    .flexed {
+      .icons {
+        display: none;
+      }
+
+      .menu-toggler {
+        display: block;
+      }
+    }
+  }
+}

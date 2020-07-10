@@ -1,0 +1,56 @@
+#features {
+  background-image: url("../img/bg_features.jpg");
+  background-size: cover;
+  background-position: left top;
+  color: #fff;
+  padding-top: 168px;
+  padding-bottom: 268px;
+
+  .acc {
+    margin-top: 70px;
+
+    &-item {
+      margin-bottom: 36px;
+
+      .acc-title {
+        color: $color_orange;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        @media (max-width: 802px) {
+          font-size: 21px;
+        }
+
+        .circle {
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          border: 1px solid #fff;
+          background: transparent;
+          border-radius: 50%;
+          vertical-align: middle;
+          margin-right: 25px;
+        }
+
+        .full {
+          background: #fff;
+        }
+      }
+
+      .acc-content {
+        font-size: 18px;
+        line-height: 22px;
+        margin-left: 40px;
+        display: none;
+        @media (max-width: 802px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-item:first-child .acc-content {
+      display: block;
+    }
+  }
+}

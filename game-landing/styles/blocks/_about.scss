@@ -1,0 +1,55 @@
+#about {
+  background-image: url('../img/bg_about.jpg');
+  background-size: cover;
+  padding-top: 200px; padding-bottom: 240px;
+  color: #fff;
+
+  .subtitle {
+    font-family: $title_font;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    position: relative;
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 160%;
+      background: #fff;
+      left: 0;
+      bottom: 0;
+      z-index: 10;
+      @media (max-width: 1023px) {
+        width: 100%;
+      }
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    max-width: 365px;
+    margin-left: 185px;
+    @media (max-width: 1023px) {
+      max-width: none;
+    }
+    @media (max-width: 500px) {
+      margin-left: 25px;
+    }
+  }
+
+  .owl-stage {
+    .owl-item {
+      img {
+        width: 502px;
+        height: 610px
+      }
+    }
+  }
+}
